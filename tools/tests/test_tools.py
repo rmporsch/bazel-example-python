@@ -1,4 +1,4 @@
-from schemas.schemas.schemas import Model
+from schemas.schemas import Model
 from tools.tools import run_test
 import pytest
 import os

@@ -1,4 +1,4 @@
-from schemas.schemas.schemas import Model
+from schemas.schemas import Model
 
 
 def run_test(k: Model):

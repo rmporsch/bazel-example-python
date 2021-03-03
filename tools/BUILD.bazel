@@ -5,7 +5,7 @@ py_library(
     name = "tools",
     srcs = ["tools/tools.py"],
     deps = [
-        "@schemas//:schemas"
+        "@example_schemas//:schemas"
     ],
     visibility = ["//visibility:public"]
 )

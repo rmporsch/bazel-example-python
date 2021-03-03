@@ -8,7 +8,7 @@ http_archive(
 load("@rules_python//python:pip.bzl", "pip_install")
 
 local_repository(
-    name="schemas",
+    name="example_schemas",
     path="../schemas"
 )
 
