@@ -1,0 +1,22 @@
+package(default_visibility = ["//visibility:public"])
+load("@my_deps//:requirements.bzl", "requirement")
+
+py_library(
+    name = "tools",
+    srcs = ["tools/tools.py"],
+    deps = [
+        "@schemas//:schemas"
+    ],
+    visibility = ["//visibility:public"]
+)
+
+py_test(
+    name = "test_tools",
+    srcs = ["tests/test_tools.py"],
+    deps = [
+        requirement("pytest"),
+        ":tools"
+    ],
+    main = "tests/test_tools.py"
+)
+
