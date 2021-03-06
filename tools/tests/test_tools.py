@@ -5,7 +5,7 @@ import os
 import sys
 
 
-class Test:
+class TestTools:
 
     def test_samples(self):
         dd = {"item": ['1']}

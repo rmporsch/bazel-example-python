@@ -7,6 +7,7 @@ http_archive(
 
 load("@rules_python//python:pip.bzl", "pip_install")
 
+
 local_repository(
     name="example_schemas",
     path="../schemas"
@@ -16,5 +17,6 @@ local_repository(
 # requirements.txt.
 pip_install(
    name = "my_deps",
-   requirements = "//:requirements.txt"
+   requirements = "//:requirements.txt",
+   python_interpreter = "/usr/bin/python3"
 )

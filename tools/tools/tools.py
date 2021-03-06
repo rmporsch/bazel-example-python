@@ -1,6 +1,6 @@
 from schemas.schemas import Model
+import os
 
 
 def run_test(k: Model):
-    print(k.item)
     return k.item
