@@ -3,7 +3,7 @@ load("@pip_deps//:requirements.bzl", "requirement")
 
 py_library(
     name = "tool_schemas",
-    srcs = ["schemas/models.py"],
+    srcs = glob(["schemas/*.py"]),
     deps = [
         requirement("pydantic")
     ],

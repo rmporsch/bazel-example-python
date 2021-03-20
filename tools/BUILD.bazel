@@ -3,7 +3,7 @@ load("@pip_deps//:requirements.bzl", "requirement")
 
 py_library(
     name = "tools",
-    srcs = ["tools/tools.py"],
+    srcs = glob(["tools/*.py"]),
     deps = [
         "//tool_schemas:tool_schemas"
     ],
