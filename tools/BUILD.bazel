@@ -1,12 +1,13 @@
 package(default_visibility = ["//visibility:public"])
-load("@my_deps//:requirements.bzl", "requirement")
+load("@pip_deps//:requirements.bzl", "requirement")
 
 py_library(
     name = "tools",
     srcs = ["tools/tools.py"],
     deps = [
-        "@example_schemas//:schemas"
+        "//tool_schemas:tool_schemas"
     ],
+    imports = ['.'],
     visibility = ["//visibility:public"]
 )
 
@@ -19,4 +20,3 @@ py_test(
     ],
     main = "tests/test_tools.py"
 )
-

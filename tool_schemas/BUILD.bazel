@@ -1,21 +1,23 @@
 package(default_visibility = ["//visibility:public"])
-load("@my_deps//:requirements.bzl", "requirement")
+load("@pip_deps//:requirements.bzl", "requirement")
 
 py_library(
-    name = "schemas",
-    srcs = ["schemas/schemas.py"],
+    name = "tool_schemas",
+    srcs = ["schemas/models.py"],
     deps = [
         requirement("pydantic")
     ],
+    imports = ['.'],
     visibility = ["//visibility:public"]
 )
 
 py_test(
-    name = "test_schemas",
+    name = "test_tool_schemas",
     srcs = ["tests/test_schemas.py"],
     deps = [
-        ":schemas",
+        ":tool_schemas",
         requirement("pytest")
     ],
     main = "tests/test_schemas.py"
 )
+

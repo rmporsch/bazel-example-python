@@ -1,7 +1,7 @@
-from schemas.schemas import Model
+import sys
+from schemas.models import Model
 import pytest
 import os
-import sys
 
 
 class Test:
